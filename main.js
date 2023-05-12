@@ -4,6 +4,13 @@ const hr = document.getElementById('hours');
 const min = document.getElementById('minutes');
 const sec = document.getElementById('seconds');
 
+
+// ========= PREVENT USER FROM RIGHT CLICK ON THE PAGE ================== //
+window.addEventListener('contextmenu' , (e) => {
+    e.preventDefault();
+});
+// ============================================================ //
+
 // ============================ PWA =========================== //
 let deferredPrompt;
 
@@ -26,12 +33,29 @@ function watch() {
 
     // console.log(typeof seconds);
 
+
     if (hours > 12) {
         // hr.innerHTML = hours - 12;   
         hr.innerHTML = `${hours - 12}<p class="am-pm">PM</p>` ;   
+    } else if (hours === 0) {
+        hr.innerHTML = `12<p class="am-pm">AM</p>`;   
+    } else if (hours === 12) {
+        hr.innerHTML = `12<p class="am-pm">PM</p>`;   
     } else {
         hr.innerHTML = `${hours}<p class="am-pm">AM</p>` ;   
     }
+
+
+    // ================== OLD CODE ====================== //
+    // if (hours > 12) {
+    //     // hr.innerHTML = hours - 12;   
+    //     hr.innerHTML = `${hours - 12}<p class="am-pm">PM</p>` ;   
+    // } else {
+    //     hr.innerHTML = `${hours}<p class="am-pm">AM</p>` ;   
+    // }
+
+    // ========================================================= //
+
 
     if (seconds === 0) {
         min.classList.add('shake');
