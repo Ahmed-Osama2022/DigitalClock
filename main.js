@@ -4,7 +4,13 @@ const hr = document.getElementById('hours');
 const min = document.getElementById('minutes');
 const sec = document.getElementById('seconds');
 
+// ============================ PWA =========================== //
+let deferredPrompt;
 
+window.addEventListener('beforeinstallprompt', (e) => {
+    deferredPrompt = e;
+});
+// ============================================================ //
 
 function watch() {
     // ========== //
