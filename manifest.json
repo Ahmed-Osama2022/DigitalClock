@@ -1,7 +1,8 @@
 {
     "name": "Digital watch",
+    "id": "Digital-Clock",
     "short_name": "Watch",
-    "start_url": "https://ahmed-osama2022.github.io/DigitalClock",
+    "start_url": "/?source=pwa",
     "icons": [
         {
             "src": "icons/manifest-icon-192.maskable.png",
