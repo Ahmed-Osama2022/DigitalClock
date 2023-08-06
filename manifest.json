@@ -1,7 +1,7 @@
 {
-    "name": "Digital watch",
+    "name": "Digital Clock",
     "id": "Digital-Clock",
-    "short_name": "Watch",
+    "short_name": "Clock",
     "start_url": "/?source=pwa",
     "icons": [
         {
