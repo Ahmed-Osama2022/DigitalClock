@@ -6,7 +6,7 @@ const sec = document.getElementById('seconds');
 
 
 // ========= PREVENT USER FROM RIGHT CLICK ON THE PAGE ================== //
-window.addEventListener('contextmenu' , (e) => {
+window.addEventListener('contextmenu', (e) => {
     e.preventDefault();
 });
 // ============================================================ //
@@ -14,18 +14,18 @@ window.addEventListener('contextmenu' , (e) => {
 
 
 // ============================ PWA =========================== //
-let deferredPrompt;
- 
-window.addEventListener('beforeinstallprompt', (e) => {
-    deferredPrompt = e;
-});
+// let deferredPrompt;
+
+// window.addEventListener('beforeinstallprompt', (e) => {
+//     deferredPrompt = e;
+// });
 
 // ============================================================ //
 
 function watch() {
     // ========== //
     let date = new Date();
-    
+
     let hours = date.getHours();
     let minutes = date.getMinutes();
     let seconds = date.getSeconds();
@@ -39,13 +39,13 @@ function watch() {
 
     if (hours > 12) {
         // hr.innerHTML = hours - 12;   
-        hr.innerHTML = `${hours - 12}<p class="am-pm">PM</p>` ;   
+        hr.innerHTML = `${hours - 12}<p class="am-pm">PM</p>`;
     } else if (hours === 0) {
-        hr.innerHTML = `12<p class="am-pm">AM</p>`;   
+        hr.innerHTML = `12<p class="am-pm">AM</p>`;
     } else if (hours === 12) {
-        hr.innerHTML = `12<p class="am-pm">PM</p>`;   
+        hr.innerHTML = `12<p class="am-pm">PM</p>`;
     } else {
-        hr.innerHTML = `${hours}<p class="am-pm">AM</p>` ;   
+        hr.innerHTML = `${hours}<p class="am-pm">AM</p>`;
     }
 
 
@@ -66,7 +66,7 @@ function watch() {
             min.classList.remove('shake');
         }, 2000);
     };
-    
+
     if (minutes === 0) {
         hr.classList.add('shake');
         setTimeout(() => {
